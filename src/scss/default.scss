@@ -4,7 +4,7 @@
 
 html,
 body,
-h1, h2, h3, h4,h5, h6 p{
+h1, h2, h3, h4,h5, h6, p{
     margin: 0;
     padding: 0;
 }
@@ -23,21 +23,52 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    position: relative;
+
+    @include extra{
+        padding: 0 250px;
+    }
+
+    @include super{
+        padding: 0 200px;
+    }
+
+    @include large{
+        padding: 0 140px;
+    }
+
+    @include medium{
+        padding: 0 90px;
+    }
+
+    @include small{
+        padding: 0 25px;
+    }
   
 }
 
 .section__header-img{
     margin: 15px auto 0 auto;
     width: 80px;
+    display: block;
 }
 
 .section__header{
     margin-top: 20px;
 
     font-family: $base-font;
+    color: #383334;
     font-size: 47px;
     line-height: 48px;
     font-weight: 900;
+
+    @include medium{
+        font-size: 36px;
+    }
+
+    @include small{
+        font-size: 32px;
+    }
 }
 
 .section__subheader{
@@ -71,10 +102,11 @@ body{
 }
 
 .how-to-use, .other, .main{
-    background: #f2f9fa;
+    background: $background-secondary-color;
 }
 
 .underline{
+    position: relative;
     &::before{
         content: '';
         width: 20px;
@@ -86,4 +118,20 @@ body{
         top: -20px;
     
     }
+}
+
+.wave-down{
+    width: 100%;
+
+    position: absolute;
+    top: -50px;
+    left: 0;
+}
+
+.wave-up{
+    width: 100%;
+
+    position: absolute;
+    bottom: -50px;
+    left: 0;
 }
