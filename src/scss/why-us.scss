@@ -1,0 +1,128 @@
+.why-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    & > .container{
+        margin-top: 80px;
+        width: 100%;
+    }
+    & .card{
+        width: 370px;
+        height: 307px;
+
+        border-radius: 10px;
+        background-color: #ffffff;
+        border: 4px solid #f64d01;
+
+        position: relative;
+
+        &.round-img--correct{
+            border-color: #61bd1f;
+
+            & .round-img--container{
+                border-color: #61bd1f;
+            }
+        }
+
+        &.why-us__bottom{
+            margin-top: 30px;
+            width: 1172px;
+            height: 60px;
+
+            font-size: 27px;
+            line-height: 27px;
+            color: #000000;
+            font-family: "Roboto";
+            font-weight: 500;
+            text-align: center;
+
+            border: 4px solid transparent;
+            border-image: linear-gradient(to right, #f64d01 0%, #61bd1f 100%);
+            border-radius: 10px;
+            border-image-slice: 1;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+    }
+
+    .round-img--container{
+        width: 8em;
+        height: 4em;
+        border: 4px solid #f64d01;
+        border-radius: 0 0 50% 50% / 0 0 100% 100%;
+
+        position: absolute;
+        z-index: 1;
+
+
+        &::after{
+            content: '';
+
+            width: 8em;
+            height: 8em;
+
+            background-color: #fff;
+            border-radius: 50%;
+
+            position: absolute;
+            transform: translate(-50%, -55%) scale(0.95);
+            z-index: 2;
+        }
+
+        & img{
+            width: 8em;
+
+            position: absolute;
+            transform: translate(-50%, -70%) scale(0.95);
+            z-index: 3;
+        }
+
+        & img.round-img--correct{
+            transform: translate(-50%, -70%) scale(0.75);
+        }
+    }
+    
+
+    & .card__header{
+        margin-top: 80px;
+    }
+
+    & .card__text{
+        margin-top: 15px;
+        
+    }
+
+    
+}
+
+.card{
+    width: 370px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__header{
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    font-family: "Roboto";
+    font-weight: 700;
+}
+
+.card__text{
+    font-size: 18px;
+    line-height: 26px;
+    color: #000000;
+    font-family: "Roboto";
+    font-weight: 500;
+    text-align: center;
+}
+
+
