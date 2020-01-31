@@ -103,6 +103,7 @@ body{
 
 .how-to-use, .other, .main{
     background: $background-secondary-color;
+    padding: 100 320px;
 }
 
 .underline{
@@ -124,7 +125,7 @@ body{
     width: 100%;
 
     position: absolute;
-    top: -50px;
+    top: 0;
     left: 0;
 }
 
@@ -132,6 +133,6 @@ body{
     width: 100%;
 
     position: absolute;
-    bottom: -50px;
+    bottom: 0;
     left: 0;
 }
